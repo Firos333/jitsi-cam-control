@@ -1745,23 +1745,23 @@ export default class ChatRoom extends Listenable {
             error => logger.log('set mute error', error));
     }
 	
-	unMuteParticipant(jid, mute, mediaType) {
-        logger.info('set mute', mute);
-        const iqToFocus = $iq(
-            { to: this.focusMucJid,
-                type: 'set' })
-            .c('mute', {
-                xmlns: `http://jitsi.org/jitmeet/${mediaType}`,
-                jid
-            })
-            .t(mute.toString())
-            .up();
-
-        this.connection.sendIQ(
-            iqToFocus,
-            result => logger.log('set mute', result),
-            error => logger.log('set mute error', error));
-    }
+//	unMuteParticipant(jid, mute, mediaType) {
+//        logger.info('set mute', mute);
+//        const iqToFocus = $iq(
+//            { to: this.focusMucJid,
+//                type: 'set' })
+//            .c('mute', {
+//                xmlns: `http://jitsi.org/jitmeet/${mediaType}`,
+//                jid
+ //           })
+//            .t(mute.toString())
+//            .up();
+//
+//        this.connection.sendIQ(
+//            iqToFocus,
+//            result => logger.log('set mute', result),
+//            error => logger.log('set mute error', error));
+//    }
 	
     /**
      * TODO: Document
