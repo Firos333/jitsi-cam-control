@@ -152,7 +152,7 @@ JitsiConferenceEventManager.prototype.setupChatRoomListeners = function() {
             // already muted).
             Statistics.sendAnalytics(createRemotelyMutedEvent(MediaType.VIDEO));
 
-           // conference.mutedVideoByFocusActor = actor;
+            conference.mutedVideoByFocusActor = actor;
 
             // set isVideoMutedByFocus when setVideoMute Promise ends
             conference.rtc.setVideoMute(true).then(
